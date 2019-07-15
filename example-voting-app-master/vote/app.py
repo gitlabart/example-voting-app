@@ -11,7 +11,7 @@ redis_password = os.getenv('REDIS_PASSWORD', "Dogs")
 hostname = socket.gethostname()
 
 
-redis = connect_to_redis("redis")
+#redis = connect_to_redis("redis")
 
 app = Flask(__name__)
 
@@ -46,4 +46,4 @@ def hello():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8080, debug=True, threaded=True)
+    app.run(host='0.0.0.0', port=6379, debug=True, threaded=True)
